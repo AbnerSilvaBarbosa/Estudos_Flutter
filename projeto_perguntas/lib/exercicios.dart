@@ -1,3 +1,21 @@
+class Produto {
+  String? nome;
+  double? preco;
+
+  Produto(this.nome, this.preco);
+}
+
+class Pessoa {
+  String? nome;
+  int? idade;
+
+  Pessoa({this.nome, this.idade});
+}
+
+int soma(int a, int b) {
+  return a + b;
+}
+
 void main() {
   int a = 3;
   double b = 3.1;
@@ -34,4 +52,10 @@ void main() {
 
   // const c = 5;
   // c = 7
+  var r = soma(10, 20);
+  print("O valor da soma é: $r");
+
+  var p1 = Produto("Lapiz", 4.59);
+
+  var pessoa = Pessoa(nome: "Abner", idade: 18);
 }
