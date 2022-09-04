@@ -11,7 +11,6 @@ class _PerguntasAppState extends State<PerguntaApp> {
     setState(() {
       perguntasSelecionada++;
     });
-    print('Pergunta respondida');
   }
 
   @override
@@ -23,13 +22,15 @@ class _PerguntasAppState extends State<PerguntaApp> {
 
     return MaterialApp(
         home: Scaffold(
-      appBar: AppBar(title: Text('Perguntas')),
+      appBar: AppBar(title: const Text('Perguntas')),
       body: Column(
         children: [
           Text(perguntas[perguntasSelecionada]),
-          ElevatedButton(onPressed: _responder, child: Text('Resposta 1')),
-          ElevatedButton(onPressed: _responder, child: Text('Resposta 2')),
-          ElevatedButton(onPressed: _responder, child: Text('Resposta 3'))
+          ElevatedButton(
+              onPressed: _responder, child: const Text('Resposta 1')),
+          ElevatedButton(
+              onPressed: _responder, child: const Text('Resposta 2')),
+          ElevatedButton(onPressed: _responder, child: const Text('Resposta 3'))
         ],
       ),
     ));
